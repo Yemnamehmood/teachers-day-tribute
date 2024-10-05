@@ -71,13 +71,14 @@ export default function Home() {
 
       {/* Prayer Section */}
       <section className="prayers p-16 bg-gray-300">
-        <h2 className="text-3xl font-semibold text-center mb-8">Prayers for Sir Hamzah🤲</h2>
-        <p>May you continue to inspire and guide your students with your wisdom👍</p>
-        <p>May success follow you in all your endeavors💕</p>
-        <p>May you find happiness and fulfillment in your teaching journey✨</p>
-        <p>May your projects be fruitful and bring you joy🥰</p>
-        <p>May you achieve all your dreams and aspirations🎉</p>
-      </section>
+  <h2 className="text-3xl font-semibold text-center mb-8">Prayers for Sir Hamzah🤲</h2>
+  <p>May you continue to inspire and guide your students with your wisdom👍</p>
+  <p>May success follow you in all your endeavors💕</p>
+  <p>May you find happiness and fulfillment in your teaching journey✨</p>
+  <p>May your projects be fruitful and bring you joy🥰</p>
+  <p>May you achieve all your dreams and aspirations🎉</p>
+</section>
+
 
       {/* Footer Section */}
       <footer className="bg-gray-800 text-white text-center py-4">
