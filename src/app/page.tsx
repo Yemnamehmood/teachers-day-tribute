@@ -72,11 +72,11 @@ export default function Home() {
       {/* Prayer Section */}
       <section className="prayers p-16 bg-gray-300">
   <h2 className="text-3xl font-semibold text-center mb-8">Prayers for Sir Hamzah🤲</h2>
-  <p>&quot;May you continue to inspire and guide your students with your wisdom&quot;👍</p>
-  <p>&quot;May success follow you in all your endeavors&quot;💕</p>
-  <p>&quot;May you find happiness and fulfillment in your teaching journey&quot;✨</p>
-  <p>&quot;May your projects be fruitful and bring you joy&quot;🥰</p>
-  <p>&quot;May you achieve all your dreams and aspirations&quot;🎉</p>
+  <p>&quot;May you continue to inspire and guide your students with your wisdom&quot; &#128077;</p>
+  <p>&quot;May success follow you in all your endeavors&quot;&#128149;</p>
+  <p>&quot;May you find happiness and fulfillment in your teaching journey&quot;&#10024;</p>
+  <p>&quot;May your projects be fruitful and bring you joy&quot;&#129392;</p>
+  <p>&quot;May you achieve all your dreams and aspirations&quot;&#127881;</p>
   </section>
 
 
