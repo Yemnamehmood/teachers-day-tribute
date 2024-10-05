@@ -2,26 +2,207 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Resetting default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Hero Section */
+.hero {
+  background-image: url('/v627-aew-20-technologybackground.jpg'); /* Background with darkish colors */
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Darker overlay */
+  z-index: 0; /* Behind the text */
+}
+
+.heroText {
+  position: relative; /* Ensure the text appears above the overlay */
+}
+
+.heroText h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.heroText p {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+/* About Section */
+.about {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 64, 0, 0.8), rgba(0, 0, 128, 0.4), rgba(169, 169, 169, 0.5)); /* Darker gradient with more black */
+  color: #e0e0e0; /* Light text color */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.aboutText {
+  width: 50%;
+  font-family: 'Merriweather', serif;
+  color: #e0e0e0;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.aboutText h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #f0f0f0; /* Lighter shade for headings */
+}
+
+.aboutText p {
+  font-size: 1.2rem;
+  color: #bbb; /* Softer gray for readability */
+  line-height: 1.8;
+}
+
+.aboutImage {
+  width: 40%;
+  display: flex;
+  justify-content: right;
+}
+
+.aboutImage img {
+  width: 100%;
+  border: 5px solid #444; /* Darker border */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Darker shadow */
+}
+
+/* Achievements Section */
+.achievements {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 64, 0, 0.8), rgba(0, 0, 128, 0.4), rgba(128, 128, 128, 0.5)); /* Darker gradient with more black */
+  color: #e0e0e0; /* Light text color */
+  text-align: center;
+}
+
+.achievements h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.projectCard {
+  background-color: #333; /* Darker card background */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s; /* Hover effect */
+}
+
+.projectCard:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.projectCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Prayer Section */
+
+.prayers {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.8), rgba(0, 64, 0, 0.7), rgba(0, 0, 128, 0.5)); /* Darker gradient for visibility */
+  color: #ffffff; /* White text for contrast */
+  text-align: center;
+}
+
+.prayers h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #e0e0e0; /* Light gray for the heading */
+}
+
+.prayers p {
+  font-size: 1.3rem;
+  color: #ddd; /* Softer gray for paragraph text */
+}
+
+/* Adjustments for other sections to match the darker theme */
+.about, .achievements {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.8), rgba(0, 64, 0, 0.6), rgba(0, 0, 128, 0.4)); /* Darker gradient */
+  color: #ffffff; /* Ensure text is visible */
+}
+
+.aboutText, .achievements h2 {
+  color: #ffffff; /* White text for all sections */
+}
+
+.projectCard {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background for cards */
+  color: #ffffff; /* White text for cards */
+}
+.projectCard a {
+  color: #0e2842; /* A bright blue for better visibility */
+  font-weight: bold; /* Make the link bold */
+  text-decoration: underline; /* Underline the link for emphasis */
+}
+
+.projectCard a:hover {
+  color: #00bfff; /* Lighter blue on hover */
+  transition: color 0.3s ease; /* Smooth transition effect */
+}
+/* Footer Section */
+footer {
+  background-color: #000; /* Black background for footer */
+  color: #e0e0e0; /* Light text color */
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .heroText h1 {
+    font-size: 2.5rem; /* Smaller font size for mobile */
   }
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+  .heroText p {
+    font-size: 1.2rem; /* Smaller font size for mobile */
+  }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .aboutText,
+  .aboutImage {
+    width: 100%; /* Stack on mobile */
+  }
+
+  .about {
+    flex-direction: column; /* Column layout on mobile */
+    align-items: center; /* Center alignment */
+  }
+
+  .projectGrid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust grid for smaller screens */
   }
 }

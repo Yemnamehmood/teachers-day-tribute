@@ -1,101 +1,92 @@
+'use client'
 import Image from "next/image";
+//import React from "react";
+
+
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div>
+      {/* Hero Section */}
+      <section className="hero">
+        <div className="heroText">
+          <h1>Tribute to Sir Hamzah</h1>
+          <p>An Inspirational Mentor and Full-Stack Developer</p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      </section>
+
+      {/* About Section */}
+      <section className="about flex items-center justify-between p-16 bg-gray-100">
+        {/* Text about Sir Hamzah */}
+        <div className="aboutText w-1/2 pr-8 text-left">
+          <h2 className="text-4xl font-bold mb-4 text-gray-800">About Sir Hamzah</h2>
+          <p className="text-lg text-gray-700 leading-7">
+            Sir Hamzah has been teaching and mentoring students for many years.
+            His journey from an educator to a successful full-stack developer has been
+            truly inspirational for all of us. He is currently working as a freelancer,
+            delivering remarkable projects and helping students achieve their dreams.
+          </p>
+        </div>
+
+        {/* Sir Hamzah's Picture */}
+        <div className="aboutImage w-1/2 flex justify-end">
           <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/Screenshot (347).png"
+            alt="Sir Hamzah"
+            width={300} 
+            height={400}
+            className="rounded-lg border-4 border-gray-300 shadow-lg" // Add Tailwind classes for styling
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        </div>
+      </section>
+
+      {/* Achievements Section */}
+      <section className="achievements p-16 bg-gray-200">
+        <h2 className="text-3xl font-semibold text-center mb-8">Achievements & Projects</h2>
+        <div className="projectGrid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="projectCard bg-white p-4 rounded shadow">
+            <h3 className="font-bold">Full-Stack Web Development</h3>
+            <p>Guided numerous students to master full-stack development.</p>
+          </div>
+          <div className="projectCard bg-white p-4 rounded shadow">
+            <h3 className="font-bold">Freelancing Success</h3>
+            <p>Became a successful freelancer, delivering high-quality projects across industries.</p>
+          </div>
+
+          {/* LinkedIn Profile Link */}
+          <div className="projectCard bg-white p-4 rounded shadow">
+            <h3 className="font-bold">LinkedIn Profile</h3>
+            <p>Connect with Sir Hamzah on LinkedIn for more updates.</p>
+            <a
+              href="https://www.linkedin.com/in/webdeveloper-react-jamstack-expert/" /* Replace this with the actual LinkedIn URL */
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:underline"
+            >
+              Visit LinkedIn Profile
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Prayer Section */}
+      <section className="prayers p-16 bg-gray-300">
+        <h2 className="text-3xl font-semibold text-center mb-8">Prayers for Sir Hamzah🤲</h2>
+        <p>May you continue to inspire and guide your students with your wisdom👍</p>
+        <p>May success follow you in all your endeavors💕</p>
+        <p>May you find happiness and fulfillment in your teaching journey✨</p>
+        <p>May your projects be fruitful and bring you joy🥰</p>
+        <p>May you achieve all your dreams and aspirations🎉</p>
+      </section>
+
+      {/* Footer Section */}
+      <footer className="bg-gray-800 text-white text-center py-4">
+        <p className="text-sm">
+          &copy; {new Date().getFullYear()} All rights reserved. Teacher's Day Tribute website to my favorite mentor by Yemna Mehmood.
+        </p>
       </footer>
+      
+
     </div>
   );
 }
